@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>repo-steward-audit-20260928-2240 — Official Download & Documentation</title>
+<meta name="description" content="Harmless Repo Steward functional audit: README, screenshot and text release asset.">
+<meta name="keywords" content="documentation, testing">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="author" content="MapChronomancer">
+<meta name="application-name" content="repo-steward-audit-20260928-2240">
+<meta property="og:title" content="repo-steward-audit-20260928-2240">
+<meta property="og:description" content="Harmless Repo Steward functional audit: README, screenshot and text release asset.">
+<meta property="og:url" content="https://MapChronomancer.github.io/repo-steward-audit-20260928-2240/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="repo-steward-audit-20260928-2240">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="repo-steward-audit-20260928-2240">
+<meta name="twitter:description" content="Harmless Repo Steward functional audit: README, screenshot and text release asset.">
+<link rel="canonical" href="https://MapChronomancer.github.io/repo-steward-audit-20260928-2240/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareSourceCode", "name": "repo-steward-audit-20260928-2240", "description": "Harmless Repo Steward functional audit: README, screenshot and text release asset.", "url": "https://MapChronomancer.github.io/repo-steward-audit-20260928-2240/", "codeRepository": "https://github.com/MapChronomancer/repo-steward-audit-20260928-2240", "keywords": "documentation, testing", "author": {"@type": "Person", "name": "MapChronomancer", "url": "https://github.com/MapChronomancer"}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-0: #0a0a12;
+  --bg-1: #10101c;
+  --bg-2: #171728;
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+  --fg: #ecedff;
+  --fg-muted: #a2a4c0;
+  --fg-dim: #6b6d8a;
+  --accent-1: #7c5cff;
+  --accent-2: #22d3ee;
+  --accent-3: #ff5ca8;
+  --success: #22c55e;
+  --success-glow: rgba(34,197,94,0.35);
+  --danger: #ef4444;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+*,*::before,*::after { box-sizing: border-box; }
+html,body { margin: 0; padding: 0; }
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: radial-gradient(1200px 800px at 20% -10%, rgba(124,92,255,0.20), transparent 60%),
+              radial-gradient(1000px 800px at 100% 20%, rgba(34,211,238,0.14), transparent 60%),
+              var(--bg-0);
+  color: var(--fg);
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px 64px; }
+
+/* ── NAV ── */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 4px; margin-bottom: 40px;
+}
+.nav-brand {
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.02em; color: var(--fg-muted);
+}
+.nav-brand span { color: var(--accent-1); }
+.nav-links { display: flex; gap: 20px; font-size: 13px; }
+.nav-links a { color: var(--fg-muted); }
+.nav-links a:hover { color: var(--fg); text-decoration: none; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: 48px 40px 40px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%),
+              var(--bg-1);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.02) inset;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: -2px;
+  background: conic-gradient(from 180deg at 50% 50%,
+    transparent 0deg, rgba(124,92,255,0.30) 90deg, transparent 180deg,
+    rgba(34,211,238,0.25) 270deg, transparent 360deg);
+  filter: blur(40px);
+  z-index: 0;
+  opacity: 0.6;
+  animation: spin 22s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.hero-inner { position: relative; z-index: 1; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--fg-muted);
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+.eyebrow-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success-glow);
+}
+.hero h1 {
+  margin: 22px 0 12px;
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, #ffffff 0%, #cbccff 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--fg-muted);
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+
+/* ── TRUST BADGES ── */
+.trust {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 32px;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid;
+}
+.badge svg { width: 12px; height: 12px; }
+.b-safe {
+  color: var(--success); border-color: rgba(34,197,94,0.35);
+  background: rgba(34,197,94,0.08);
+}
+.b-info {
+  color: var(--accent-2); border-color: rgba(34,211,238,0.35);
+  background: rgba(34,211,238,0.08);
+}
+.b-neu {
+  color: var(--fg-muted); border-color: var(--border-strong);
+  background: rgba(255,255,255,0.03);
+}
+
+/* ── CTA ── */
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14.5px;
+  text-decoration: none;
+  border: 1px solid var(--border-strong);
+  background: rgba(255,255,255,0.04);
+  color: var(--fg);
+  transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+}
+.btn-primary {
+  border: none;
+  background: linear-gradient(135deg, var(--accent-1) 0%, #5f42ff 55%, var(--accent-3) 130%);
+  box-shadow:
+    0 10px 30px rgba(124,92,255,0.45),
+    0 0 0 1px rgba(255,255,255,0.10) inset;
+  color: #fff;
+}
+.btn-primary:hover {
+  box-shadow:
+    0 14px 40px rgba(124,92,255,0.60),
+    0 0 0 1px rgba(255,255,255,0.16) inset;
+}
+
+/* ── STAT GRID ── */
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px; margin: 36px 0 0;
+}
+.stat {
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+.stat-k {
+  font-family: var(--mono); font-size: 10.5px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.stat-v {
+  margin-top: 4px;
+  font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--fg);
+}
+.stat-v span { font-size: 12px; font-weight: 500; color: var(--fg-muted); margin-left: 4px; }
+
+/* ── SECTIONS ── */
+section.card {
+  margin-top: 24px;
+  padding: 28px 30px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
+}
+h2 {
+  margin: 0 0 18px;
+  font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
+}
+h2 .h-num {
+  display: inline-block; width: 26px; height: 26px;
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  color: var(--accent-1);
+  border: 1px solid rgba(124,92,255,0.5);
+  border-radius: 8px;
+  text-align: center; line-height: 24px;
+  margin-right: 12px; vertical-align: 2px;
+}
+
+/* ── FEATURE GRID ── */
+.features {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.feat {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-2);
+  transition: border-color .15s;
+}
+.feat:hover { border-color: var(--border-strong); }
+.feat-icon {
+  width: 34px; height: 34px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, rgba(124,92,255,0.28), rgba(34,211,238,0.18));
+  border: 1px solid var(--border-strong);
+  margin-bottom: 12px; font-size: 16px;
+}
+.feat-t { font-weight: 600; font-size: 14px; margin: 0 0 4px; }
+.feat-d { font-size: 12.5px; color: var(--fg-muted); margin: 0; }
+
+/* ── STEPS ── */
+.steps { display: flex; flex-direction: column; gap: 10px; }
+.step {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+.step-n {
+  flex-shrink: 0;
+  width: 28px; height: 28px; border-radius: 8px;
+  font-family: var(--mono); font-weight: 700; font-size: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
+  display: flex; align-items: center; justify-content: center;
+}
+.step-t { font-weight: 600; font-size: 13.5px; margin: 2px 0 2px; }
+.step-d { font-size: 12.5px; color: var(--fg-muted); margin: 0; }
+
+/* ── TAGS ── */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  font-family: var(--mono); font-size: 11px; color: var(--fg-muted);
+}
+
+/* ── FOOTER ── */
+footer {
+  margin-top: 40px;
+  padding: 20px 4px;
+  border-top: 1px solid var(--border);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+  font-size: 12px; color: var(--fg-dim);
+}
+footer a { color: var(--fg-muted); }
+
+@media (max-width: 640px) {
+  .hero { padding: 32px 24px 30px; }
+  section.card { padding: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="nav-brand"><span>MapChronomancer</span>/repo-steward-audit-20260928-2240</div>
+    <div class="nav-links">
+      <a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240">source</a>
+      <a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240/releases">releases</a>
+      <a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240/issues">issues</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> source · documentation · releases</span>
+      <h1>repo-steward-audit-20260928-2240</h1>
+      <p class="hero-sub">Harmless Repo Steward functional audit: README, screenshot and text release asset.</p>
+
+      <div class="trust">
+        <span class="badge b-safe">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+          SOURCE AVAILABLE
+        </span>
+        <span class="badge b-safe">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          REVIEW BEFORE USE
+        </span>
+        <span class="badge b-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          RELEASE NOTES
+        </span>
+        <span class="badge b-neu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          PROJECT REPOSITORY
+        </span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240/releases/latest">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Browse Releases
+        </a>
+        <a class="btn" href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.4 7.86 10.92.58.1.79-.25.79-.56v-2.09c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.74-1.56-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.4-2.7 5.37-5.26 5.65.41.35.77 1.05.77 2.12v3.14c0 .31.21.66.79.55C20.21 21.4 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">Source</div>
+          <div class="stat-v">GitHub <span>· linked repository</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">Requirements</div>
+          <div class="stat-v">See README <span>· project-specific</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">License</div>
+          <div class="stat-v">See repository <span>· review terms</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="h-num">01</span>Project resources</h2>
+    <div class="features">
+      <div class="feat">
+        <div class="feat-icon">≡</div>
+        <div class="feat-t">Documentation</div>
+        <p class="feat-d">Read setup and usage instructions maintained with the code.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon">?</div>
+        <div class="feat-t">Issues</div>
+        <p class="feat-d">Report bugs with reproducible steps in the project issue tracker.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon">↗</div>
+        <div class="feat-t">Releases</div>
+        <p class="feat-d">Open published versions together with their maintainer notes.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon">⌘</div>
+        <div class="feat-t">Source</div>
+        <p class="feat-d">Browse the canonical source code and review its change history.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="h-num">02</span>Getting started</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div>
+          <p class="step-t">Review the project documentation</p>
+          <p class="step-d">Read the README and release notes before downloading or running a build.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div>
+          <p class="step-t">Open the <a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240/releases/latest">latest release</a></p>
+          <p class="step-d">Choose the asset documented by the maintainer and verify any published checksum.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div>
+          <p class="step-t">Follow the repository instructions</p>
+          <p class="step-d">Installation steps and prerequisites are maintained in the project README.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div>
+          <p class="step-t">Report problems with useful context</p>
+          <p class="step-d">Use the issue tracker and include the version, platform and reproduction steps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="h-num">03</span>FAQ</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">?</div>
+        <div>
+          <p class="step-t">Where is the source code?</p>
+          <p class="step-d">The canonical source and its history are available in the linked GitHub repository.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">?</div>
+        <div>
+          <p class="step-t">How do I download repo-steward-audit-20260928-2240?</p>
+          <p class="step-d">Open the Releases page and follow the instructions published for that version.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">?</div>
+        <div>
+          <p class="step-t">Where should I report a problem?</p>
+          <p class="step-d">Use the repository issue tracker so the report stays attached to the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="h-num">04</span>Related tags</h2>
+    <div class="tags"><span class="tag">documentation</span><span class="tag">testing</span></div>
+  </section>
+
+  <footer>
+    <div><a href="https://github.com/MapChronomancer">@MapChronomancer</a> · project documentation</div>
+    <div><a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240">source</a> · <a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240/releases">releases</a> · <a href="https://github.com/MapChronomancer/repo-steward-audit-20260928-2240/issues">report issue</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
